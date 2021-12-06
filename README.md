@@ -1,7 +1,7 @@
 # ProgImperativa-CheckPoint3
 
 EXECUTANDO:
-Cada passo foi desenvolvido em um arquivo js separado. Para executar cada passo, basta, dentro de cada arquivo:
+Cada passo foi desenvolvido em um arquivo js separado. Para executar cada passo, basta:
 - PASSO 1: Execute o comando node Parte1_Passo1.js
 - PASSO 2: Execute o comando node Parte1_Passo2.js
 - PASSO 3: Execute o comando node Parte1_Passo3.js

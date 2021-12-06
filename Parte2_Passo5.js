@@ -32,6 +32,7 @@ let curso = {
 //Criando um aluno para teste:
 let Guilherme = new aluno('Guilherme', 0,[ 10, 10, 9 ]);
 let Amanda = new aluno("Amanda",2,[8, 8, 7]);
+
 //Testando método de aprovação:
 console.log(curso.aprovacao(Guilherme));
 console.log(curso.aprovacao(Amanda));
