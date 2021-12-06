@@ -1,4 +1,4 @@
-//Passo 3 e Passo 4:
+//Passo 4:
 const aluno = require('./aluno');
 let curso = {
     nomeCurso: 'Programação Imperativa',

@@ -1,4 +1,6 @@
 //Passo 6:
+
+/*
 const aluno = require('./aluno');
 let curso = {
     nomeCurso: 'Programação Imperativa',
@@ -39,4 +41,42 @@ let curso = {
 curso.adicionarAlunos("Guilherme",1,[10, 9, 10]);
 curso.adicionarAlunos('Amanda',2,[8,8,7]);
 
+console.log(curso.aprovacaoListaEstudantes());
+*/
+
+//Passo 6:
+const aluno = require('./aluno');
+let curso = {
+    nomeCurso: 'Programação Imperativa',
+    notaAprovacao: 7,
+    faltasMaximas: 2,
+    listaEstudantes: [],
+    adicionarAlunos: function (nome, faltas, notas){
+        let novoAluno = new aluno(nome, faltas, notas);
+        this.listaEstudantes.push(novoAluno);
+    },
+    aprovacao: function(alunox){
+        let media = alunox.calcularMedia(); //Método existente dentro do objeto aluno quando este foi criado pela class Aluno
+        if (media>=this.notaAprovacao && alunox.totalFaltas < this.faltasMaximas){
+            return true;
+        } else if (alunox.totalFaltas == this.faltasMaximas && media>this.notaAprovacao*1.1) {
+            return true;
+        } else{
+            return false;
+        }
+    },
+    aprovacaoListaEstudantes(){
+        let listaAprovacao = [];
+        for (let i2=0; i2<this.listaEstudantes.length; i2++){
+            listaAprovacao.push(this.aprovacao(this.listaEstudantes[i2]));
+        }
+        return listaAprovacao;
+    }
+}
+
+//Adicionando alunos na lista de estudantes:
+curso.adicionarAlunos("Guilherme",1,[10, 9, 10]);
+curso.adicionarAlunos('Amanda',2,[8,8,7]);
+
+//Imprimindo resultado de aprovação da lista de estudantes:
 console.log(curso.aprovacaoListaEstudantes());

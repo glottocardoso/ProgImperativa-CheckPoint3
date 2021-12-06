@@ -10,7 +10,7 @@ let curso = {
         this.listaEstudantes.push(novoAluno);
     },
     aprovacao: function(alunox){
-        let media = this.calcularMedia(alunox.notas);
+        let media = alunox.calcularMedia();//Método existente dentro do objeto aluno quando este foi criado pela class Aluno
         if (media>=this.notaAprovacao && alunox.totalFaltas < this.faltasMaximas){
             return true;
         } else if (alunox.totalFaltas == this.faltasMaximas && media>this.notaAprovacao*1.1) {
@@ -29,4 +29,9 @@ let curso = {
     }
 }
 
-console.log(curso.aprovacao({nome: 'Guilherme', totalFaltas: 0, notas:[ 10, 10, 9 ]}));
+//Criando um aluno para teste:
+let Guilherme = new aluno('Guilherme', 0,[ 10, 10, 9 ]);
+let Amanda = new aluno("Amanda",2,[8, 8, 7]);
+//Testando método de aprovação:
+console.log(curso.aprovacao(Guilherme));
+console.log(curso.aprovacao(Amanda));

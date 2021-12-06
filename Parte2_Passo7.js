@@ -11,7 +11,7 @@ let curso = {
         this.listaEstudantes.push(novoAluno);
     },
     aprovacao: function(alunox){
-        let media = this.calcularMedia(alunox.notas);
+        let media = alunox.calcularMedia(); //Método existente dentro do objeto aluno quando este foi criado pela class Aluno
         if (media>=this.notaAprovacao && alunox.totalFaltas < this.faltasMaximas){
             return true;
         } else if (alunox.totalFaltas == this.faltasMaximas && media>this.notaAprovacao*1.1) {
@@ -19,14 +19,6 @@ let curso = {
         } else{
             return false;
         }
-    },
-    calcularMedia(notas){
-        let soma = 0;
-        for (let i=0;i<notas.length;i++){
-            soma=soma + notas[i];
-        }
-        let media = soma/notas.length;
-        return media;
     },
     aprovacaoListaEstudantes(){
         let listaAprovacao = [];
@@ -36,10 +28,12 @@ let curso = {
         return listaAprovacao;
     }
 }
-
+//Imprimindo o resultado da lista de estudantes presente no módulo estudantes:
 console.log(curso.aprovacaoListaEstudantes());
 
+//Adicionando mais dois alunos:
 curso.adicionarAlunos("Guilherme",1,[10, 9, 10]);
 curso.adicionarAlunos('Amanda',2,[8,8,7]);
 
+//Imprimindo o resultado da lista de estudantes com os dois novos alunos:
 console.log(curso.aprovacaoListaEstudantes());
