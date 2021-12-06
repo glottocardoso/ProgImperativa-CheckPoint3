@@ -34,5 +34,5 @@ let Guilherme = new aluno('Guilherme', 0,[ 10, 10, 9 ]);
 let Amanda = new aluno("Amanda",2,[8, 8, 7]);
 
 //Testando método de aprovação:
-console.log(curso.aprovacao(Guilherme));
-console.log(curso.aprovacao(Amanda));
+console.log(`O aluno ${Guilherme.nome} foi aprovado(a)? ${curso.aprovacao(Guilherme)}`);
+console.log(`O aluno ${Amanda.nome} foi aprovado(a)? ${curso.aprovacao(Amanda)}`);

@@ -2,7 +2,7 @@
 const aluno = require('./aluno');
 const estudantes = require('./estudantes');
 let curso = {
-    nomeCurso: 'Programação Imperativa',
+    nomeCurso:'Programação Imperativa',
     notaAprovacao: 7,
     faltasMaximas: 2,
     listaEstudantes: estudantes,
