@@ -9,3 +9,7 @@ Cada passo foi desenvolvido em um arquivo js separado. Para executar cada passo,
 - PASSO 5: Execute o comando node Parte2_Passo5.js
 - PASSO 6: Execute o comando node Parte2_Passo6.js
 - PASSO 7: Execute o comando node Parte2_Passo7.js
+
+Obs1: Na subpasta "aluno" está o arquivo com o construtor de alunos, utilizado em vários passos desta atividade.
+Obs2: Na subpasta "estudantes" está o arquivo com a lista de estudantes, utilizado no passo 7 desta atividade.
+Ambos os arquivos das subpastas já estão sendo requisitados dentro do arquivo de cada passo correspondente.
