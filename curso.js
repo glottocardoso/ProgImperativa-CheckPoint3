@@ -7,7 +7,7 @@
     let aluno2 = new aluno("Amanda",2,[8, 8, 7]);
 
 //Passo 2:
-    //Método adicionado no módulo "aluno"
+    //Método calcularMédia e faltas adicionados dentro do módulo "aluno"
 
 //Passo 3:
     let curso = {
@@ -43,8 +43,12 @@
 
 //Impressões no console:
     console.log(`--------------Passo 1 - Criação dos alunos:--------------`);
+    console.log(`Objetos alunos criados:`);
     console.log(aluno1);
     console.log(aluno2);
+    console.log(`Alunos criados:`)
+    console.log(aluno1.exibirAluno());
+    console.log(aluno2.exibirAluno());
 
     console.log(`--------------Passo 2 - Incluir método calcularMedia e Faltas:--------------`)
     console.log(`O aluno ${aluno1.nome} tem média ${aluno1.calcularMedia()} e ${aluno1.totalFaltas} falta(s)`);
@@ -55,7 +59,7 @@
     console.log(`--------------Passo 3 - Criar o objeto curso:--------------`);
     console.log("Objeto curso:");
     console.log(curso);
-    console.log("Lista de estudantes dentro do objeto curso");
+    console.log("Lista de estudantes dentro do objeto curso:");
     console.log(curso.listaEstudantes);
 
     console.log(`--------------Passo 4 - Criar o método adicionar alunos dentro da lista de estudantes:--------------`);
@@ -72,7 +76,6 @@
     console.log(`--------------Passo 6 - Criar método para verificação da aprovação da lista de estudantes do objeto curso:--------------`);
     console.log(`Lista de aprovação (true - Aprovado / false - Reprovado):`)
     console.log(curso.aprovacaoListaEstudantes());
-
 
     console.log(`--------------Passo 7 - Incluir lista de estudantes do módulo estudantes para ser verificada:--------------`);
 
