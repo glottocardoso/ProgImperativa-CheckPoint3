@@ -15,7 +15,7 @@ const aluno = class Aluno{
     }
 
     faltas(){
-        return (this.totalFaltas + 1);
+        this.totalFaltas = this.totalFaltas + 1;
     };
 
     exibirAluno(){

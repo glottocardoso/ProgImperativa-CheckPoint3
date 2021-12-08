@@ -9,6 +9,8 @@
 //Passo 2:
     //Método calcularMédia e faltas adicionados dentro do módulo "aluno"
 
+
+
 //Passo 3:
     let curso = {
         nomeCurso: 'Programação Imperativa',
@@ -52,9 +54,11 @@
 
     console.log(`--------------Passo 2 - Incluir método calcularMedia e Faltas:--------------`)
     console.log(`O aluno ${aluno1.nome} tem média ${aluno1.calcularMedia()} e ${aluno1.totalFaltas} falta(s)`);
-    console.log(`Após aplicar o método faltas() o aluno ${aluno1.nome} passou a ter ${aluno1.faltas()} falta(s)`);
+    aluno1.faltas();
+    console.log(`Após aplicar o método faltas() o aluno ${aluno1.nome} passou a ter ${aluno1.totalFaltas} falta(s)`);
     console.log(`O aluno ${aluno2.nome} tem média ${aluno2.calcularMedia()} e ${aluno2.totalFaltas} falta(s)`);
-    console.log(`Após aplicar o método faltas() o aluno ${aluno2.nome} passou a ter ${aluno2.faltas()} falta(s)`);
+    aluno2.faltas();
+    console.log(`Após aplicar o método faltas() o aluno ${aluno2.nome} passou a ter ${aluno2.totalFaltas} falta(s)`);
 
     console.log(`--------------Passo 3 - Criar o objeto curso:--------------`);
     console.log("Objeto curso:");
