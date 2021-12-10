@@ -22,6 +22,11 @@
             let novoAluno = new aluno(nome, faltas, notas);
             this.listaEstudantes.push(novoAluno);
         },
+        exibirListaEstudantes: function(){
+            for (let i4=0; i4<this.listaEstudantes.length;i4++){
+                console.log(`Aluno ${i4}: Nome: ${this.listaEstudantes[i4].nome}, Faltas: ${this.listaEstudantes[i4].totalFaltas}, Notas: ${this.listaEstudantes[i4].notas}`);
+            }
+        },
 //Passo 5:
         aprovacao: function(alunox){
             let media = alunox.calcularMedia();
@@ -64,14 +69,14 @@
     console.log("Objeto curso:");
     console.log(curso);
     console.log("Lista de estudantes dentro do objeto curso:");
-    console.log(curso.listaEstudantes);
+    curso.exibirListaEstudantes();
 
     console.log(`--------------Passo 4 - Criar o método adicionar alunos dentro da lista de estudantes:--------------`);
     console.log("Adicionando o aluno Débora com o método adicionarAlunos()");
     curso.adicionarAlunos("Débora",2,[10, 9, 10]); // Adiciona o aluno Débora
     console.log(`Aluno ${curso.listaEstudantes[curso.listaEstudantes.length-1].nome} adicionado com sucesso!`)
     console.log("Nova lista de estudantes do objeto curso:");
-    console.log(curso.listaEstudantes); //Imprime somente a lista de objetos listaEstudantes
+    curso.exibirListaEstudantes();
 
     console.log(`--------------Passo 5 - Criar método para verificação da aprovação por aluno:--------------`);
     console.log(`O aluno ${aluno1.nome} foi aprovado(a)? ${curso.aprovacao(aluno1)}`);
@@ -89,3 +94,5 @@
 
     console.log(`Lista de aprovação (true - Aprovado / false - Reprovado):`);
     console.log(curso.aprovacaoListaEstudantes());
+
+
